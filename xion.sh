@@ -84,7 +84,7 @@ EOF
 
 cp $HOME/.xiond/data/priv_validator_state.json $HOME/.xiond/priv_validator_state.json.backup
 rm -rf $HOME/.xiond/data $HOME/.xiond/wasm
-curl https://server-5.itrocket.net/testnet/burnt/burnt_2024-10-07_10196398_snap.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.xiond
+curl https://server-5.itrocket.net/testnet/burnt/burnt_2024-10-08_10206259_snap.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.xiond
 mv $HOME/.xiond/priv_validator_state.json.backup $HOME/.xiond/data/priv_validator_state.json
 
 sudo systemctl start xiond && sudo journalctl -fu xiond -o cat
