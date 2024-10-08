@@ -72,7 +72,7 @@ sudo tee /etc/systemd/system/xiond.service > /dev/null <<EOF
 Description=Burnt node
 After=network-online.target
 [Service]
-User=$USER
+User=root
 WorkingDirectory=$HOME/.xiond
 ExecStart=$(which xiond) start --home $HOME/.xiond
 Restart=on-failure
