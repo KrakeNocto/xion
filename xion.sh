@@ -84,7 +84,8 @@ EOF
 
 cp $HOME/.xiond/data/priv_validator_state.json $HOME/.xiond/priv_validator_state.json.backup
 rm -rf $HOME/.xiond/data $HOME/.xiond/wasm
-curl https://server-5.itrocket.net/testnet/burnt/burnt_2024-10-08_10206259_snap.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.xiond
+wget http://162.55.90.36:13242/wasm_folder.tar..gz && tar -xzf wasm_folder.tar..gz -C /root/.xiond
+wget http://162.55.90.36:13242/xion_snap_our.tar.gz && tar -xzf xion_snap_our.tar.gz -C $HOME/.xiond
 mv $HOME/.xiond/priv_validator_state.json.backup $HOME/.xiond/data/priv_validator_state.json
 
 sudo systemctl start xiond && sudo journalctl -fu xiond -o cat
