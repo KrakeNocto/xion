@@ -1,4 +1,4 @@
-echo "Sleeping 0 seconds (12 hours)"
+echo "Sleeping 43200 seconds (12 hours)"
 sleep 43200
 
 min_time_c=600
