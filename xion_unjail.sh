@@ -1,8 +1,8 @@
-echo "Sleeping 43200 seconds (12 hours)"
-sleep 43200
+echo "Sleeping 0 seconds (0 hours)"
+sleep 0
 
 min_time_c=600
-max_time_c=129600
+max_time_c=28800
 sleep_time_c=$(shuf -i $min_time_c-$max_time_c -n 1)
 
 echo "Unjail validator after $sleep_time_c seconds"
